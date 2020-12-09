@@ -1,0 +1,21 @@
+<h2>Detalhes da Reserva</h2> 
+
+<hr/>
+<div *ngIf="room">
+  <div>
+    <label><b>Solicitante: </b></label> {{room.name}}
+  </div>
+  <div>
+    <label><b> Data da reserva:</b></label> {{room.date}}
+  </div>
+  <div>
+    <label><b> Inicio: </b></label> {{room.startHour}}
+  </div>
+    <div>
+    <label><b> Encerramento:</b></label> {{room.endHour}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Retornar</button><br>

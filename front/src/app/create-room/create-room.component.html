@@ -1,0 +1,32 @@
+<h3>Reserva de Salas</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Solicitante</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="room.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Data Reservada</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="room.date" name="date">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Inicio</label>
+      <input type="text" class="form-control" id="startHour" required [(ngModel)]="room.startHour" name="startHour">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Encerramento</label>
+        <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
+      </div>
+
+    <button type="submit" class="btn btn-success">Reservar</button>
+    
+    <button class="btn btn-info" style="margin-left: 10px" (click)="newRoom()">Voltar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <button class="btn btn-success" (click)="newRoom()">Add</button> 
+</div>

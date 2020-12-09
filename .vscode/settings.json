@@ -1,0 +1,4 @@
+{
+    "spring-boot.ls.checkJVM": false,
+    "git.ignoreLimitWarning": true
+}
